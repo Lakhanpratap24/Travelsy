@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tourismself.css">
+    <style>
+      
+
+* { box-sizing: border-box; }
+html{
+  overflow-x: hidden;
+}
+body {
+  height: 100vh ;  
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin: 30px;
+  /* border: 5px solid #CCC; */
+  position: relative;
+  width: 500px;
+  height:  680px;
+  margin: 0px auto;
+  perspective: 2000px;
+
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  /* position: absolute; */
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  background: rgb(17,15,50);
+background: linear-gradient(336deg, rgba(17,15,50,1) 48%, rgba(87,89,87,1) 68%, rgba(3,52,62,1) 100%);
+  position: absolute;
+  width: 100%;
+  /* min-height: 600px;
+  max-height: 700px; */
+  height: fit-content;
+  left: 10px;
+  top: 0px;
+  border: 3px solid rgb(0, 1, 9);
+  /* line-height: 116px; */
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+}
+.carousel-cell span{
+    border: 3px solid rgb(235, 172, 15);
+    color: gold;
+padding: 0px 10rem;
+font-size: 30rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.carousel__cell::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
+
+
+.previous-button{
+left: 200px;
+}
+.next-button{
+ 
+right:  200px;
+
+}
+.carousel__cell h3{
+margin: 0px;
+}
+
+
+.previous-button,.next-button{
+  background-color: #090909a1;
+
+  position: absolute;
+top: 350px;
+  border-radius: 100%;
+  font-size: 40px;
+  color: gray;
+  border: 0px solid black;
+
+}
+
+@media  screen and (max-width:1519px) {
+  html{
+    width: 100vw;
+  }
+body{
+  width: 100%;
+}
+.carousel{
+  width: 100%;
+}
+
+.container{ 
+  perspective: 1000px;
+}
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
+}
+
+@media  screen and (max-width:1344px) {
+
+  .carousel{
+    width: 60%;
+  }
+
+  .container{ 
+    perspective: 200px;
+  }
+  .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(-260px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(-260px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(-260px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(-260px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(-260px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(-260px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(-260px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(-260px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(-260px); }
+}
+
+@media  screen and (max-width:950px) {
+
+  .previous-button{
+left: 100px;
+}
+.next-button{
+ 
+right:  100px;
+
+}
+
+}
+
+@media  screen and (max-width:550px) {
+html{
+  width: 100vw;
+}
+
+.previous-button{
+left: 10px;
+}
+.next-button{
+
+right:  10px;
+
+}
+html{
+  height: 700px;
+}
+}
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="carousel">
+            <div class="show carousel__cell">
+              
+                  <span>
+                      Jodhpur
+                  </span>
+
+  <div class="video"><iframe width="100%" height="300px"  src="https://www.youtube.com/embed/h7FltJtuPTk"
+      title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe></div>
+  <p>
+      It is popularly known as the "Blue City" among people of Rajasthan and all over India. The city has expanded greatly outside the wall, though over the past several decades. Jodhpur lies near the geographic centre of the Rajasthan state, which makes it a convenient base for travel in a region much frequented by tourists. The city featured in The New York Times's "52 Places to Go in 2020".
+  </p>
+  <button>Read More</button>
+</div>
+
+
+          
+
+            <div class="show carousel__cell">
+              
+                  <span>
+                      Jaipur
+                  </span>
+    
+              <div class="video"><iframe width="100%" height="300" src="https://www.youtube.com/embed/kRZLUCWswlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <p>
+                  Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. 
+              </p>
+              <button>Read More</button>
+          </div>
+          
+
+          <div class="show carousel__cell">
+          
+                <span>
+                    Udaipur
+                </span>
+            
+            <div class="video"><iframe width="100%" height="300" src="https://www.youtube.com/embed/QO7hXsspqp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p>
+                Udaipur, the beautiful capital of Mewar, Rajasthan, is a royal tourist destination for travellers who love history, culture and architecture. It is quite a renowned destination owing to its massive palaces, ancient forts, beautiful lakes, lush green gardens, age-old temples, romantic backdrops and so much more. An attractive and wishful destination tourists.
+            </p>
+            <button>Read More</button>
+        </div>
+        
+        <div class="show carousel__cell">
+            
+                <span>
+                    Jodh
+                </span>
+            
+            <div class="video"><iframe width="100%" height="300" src="https://www.youtube.com/embed/h7FltJtuPTk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+            <p>
+                It is popularly known as the "Blue City" among people of Rajasthan and all over India. The city has expanded greatly outside the wall, though over the past several decades. Jodhpur lies near the geographic centre of the Rajasthan state, which makes it a convenient base for travel in a region much frequented by tourists. The city featured in The New York Times's "52 Places to Go in 2020".
+            </p>
+            <button>Read More</button>
+        </div>
+
+        <div class="show carousel__cell">
+            
+                <span>
+                    Jaip
+                </span>
+            
+            <div class="video"><iframe width="100%" height="300" src="https://www.youtube.com/embed/kRZLUCWswlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p>
+                Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. 
+            </p>
+            <button>Read More</button>
+        </div>
+
+        <div class="show carousel__cell">
+            
+                <span>
+                    Udaip
+                </span>
+            
+            <div class="video"><iframe width="100%" height="300" src="https://www.youtube.com/embed/QO7hXsspqp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p>
+                Udaipur, the beautiful capital of Mewar, Rajasthan, is a royal tourist destination for travellers who love history, culture and architecture. It is quite a renowned destination owing to its massive palaces, ancient forts, beautiful lakes, lush green gardens, age-old temples, romantic backdrops and so much more. An attractive and wishful destination tourists.
+            </p>
+            <button>Read More</button>
+        </div>
+        
+
+         
+        </div>
+      </div>
+      
+          <button class="previous-button">&#60;</button>
+          <button class="next-button">></button>
+      
+
+
+      <script>
+
+var carousel = document.querySelector('.carousel');
+var cells = carousel.querySelectorAll('.carousel__cell');
+var cellCount; // cellCount set from cells-range input value
+var selectedIndex = 0;
+var cellWidth = carousel.offsetWidth;
+var cellHeight = carousel.offsetHeight;
+var isHorizontal = true;
+var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+var radius, theta;
+// console.log( cellWidth, cellHeight );
+
+function rotateCarousel() {
+  var angle = theta * selectedIndex * -1;
+  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
+    rotateFn + '(' + angle + 'deg)';
+}
+
+var prevButton = document.querySelector('.previous-button');
+prevButton.addEventListener( 'click', function() {
+  selectedIndex--;
+var index;
+  if(selectedIndex<0)
+ {
+index=cellCount-(-1*selectedIndex%cellCount);
+ }
+ else
+ {
+  index=selectedIndex%cellCount;
+ }
+
+  var h=parseInt(cells[index].offsetHeight)+20;
+  var container = document.querySelector('.container');
+  container.style.height=h+"px";
+
+  console.log(h+"px");
+
+
+
+  rotateCarousel();
+});
+
+var nextButton = document.querySelector('.next-button');
+nextButton.addEventListener( 'click', function() {
+  selectedIndex++;
+
+
+  var index;
+  if(selectedIndex<0)
+ {
+index=cellCount-(selectedIndex%cellCount);
+ }
+ else
+ {
+  index=selectedIndex%cellCount;
+ }
+
+  var h=parseInt(cells[index].offsetHeight)+20;
+  var container = document.querySelector('.container');
+  container.style.height=h+"px";
+
+  console.log(h+"px");
+
+  rotateCarousel();
+});
+
+
+
+
+function changeCarousel() {
+  cellCount = 6;
+  theta = 360 / cellCount;
+  var cellSize = isHorizontal ? cellWidth : cellHeight;
+  radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
+  for ( var i=0; i < cells.length; i++ ) {
+    var cell = cells[i];
+    if ( i < cellCount ) {
+      // visible cell
+      cell.style.opacity = 1;
+      var cellAngle = theta * i;
+      cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
+    } else {
+      // hidden cell
+      cell.style.opacity = 0;
+      cell.style.transform = 'none';
+    }
+  }
+
+  rotateCarousel();
+}
+
+function onOrientationChange() {
+  var checkedRadio = document.querySelector('input[name="orientation"]:checked');
+  rotateFn ='rotateY';
+  changeCarousel();
+}
+
+// set initials
+onOrientationChange();
+
+
+      </script>
+
+
+
+
+
+</body>
+</html> 

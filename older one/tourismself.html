@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-$y</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="tourismself.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+
+    <script>
+function showkr(){
+        document.querySelector('#outerbox').style.display="flex";
+    }
+
+function hidekr(){
+    document.getElementById("outerbox").style.display="none";
+}
+
+function reset()
+{
+    document.getElementById("name").value="";
+    document.getElementById("phone").value="";
+    document.getElementById("mail").value="";
+}
+
+
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+
+
+
+  <div id="outerbox">
+      
+    <div id="form">
+<span>Name :</span>
+<input type="text" id="name">
+<br>
+<span>phone no. :</span>
+<input type="text" id="phone">
+
+<br>
+<span>mail :</span>
+<input type="text" name="" id="mail">
+<br>
+
+<button>Submit</button>
+<button onclick="reset()">reset</button>
+<button id="hider" onclick="hidekr()">cancel</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <header>
+        <h1>Travel-<span>&dollar;</span>y</h1>
+    </header>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="3dslider.html" target="_parent">Places</a>
+       <div id="hotel">
+        <a href="#" id="hotel-click">Hotels <span style="font-size:15px;">&#9660;</span></a>
+            <div id="nav-options">
+                <a href="#">5 Star</a>
+                <a href="#">4 Star</a>
+                <a href="#">3 Star</a>
+            </div>
+        </div>
+        <a href="#">Adventure</a>
+        <a href="#" id="login" onclick="showkr()">Login</a>
+    </nav>
+
+    <main>
+        <section>
+            <!-- This is for showing places -->
+            <h2> <span> Places you Would Love</span></h2>
+            <div class="container">
+
+                <div class="show">
+                    <h3>
+                        <span>
+                            Jodhpur
+                        </span>
+                    </h3>
+                    <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/h7FltJtuPTk"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
+                    <p>
+                        It is popularly known as the "Blue City" among people of Rajasthan and all over India. The city has expanded greatly outside the wall, though over the past several decades. Jodhpur lies near the geographic centre of the Rajasthan state, which makes it a convenient base for travel in a region much frequented by tourists. The city featured in The New York Times's "52 Places to Go in 2020".
+                    </p>
+                    <button>Read More</button>
+                </div>
+                <div class="show">
+                    <h3>
+                        <span>
+                            Jaipur
+                        </span>
+                    </h3>
+                    <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/kRZLUCWswlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <p>
+                        Founded in AD 1727 by Maharaja Sawai Jai Singh II, Jaipur, the capital of Rajasthan is popularly known as the Pink City. With broad avenues and spacious gardens, the city is steeped in history and culture. Here the past comes alive in magnificent forts and palaces, blushed pink, where once lived the maharajas. The bustling bazaars of Jaipur, famous for Rajasthan jewellery, fabric and shoes, possess a timeless quality and are a treasure-trove for the shoppers. 
+                    </p>
+                    <button>Read More</button>
+                </div>
+                <div class="show">
+                    <h3>
+                        <span>
+                            Udaipur
+                        </span>
+                    </h3>
+                    <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QO7hXsspqp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <p>
+                        Udaipur, the beautiful capital of Mewar, Rajasthan, is a royal tourist destination for travellers who love history, culture and architecture. It is quite a renowned destination owing to its massive palaces, ancient forts, beautiful lakes, lush green gardens, age-old temples, romantic backdrops and so much more.
+                    </p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="center">
+            <fieldset>
+                <legend align="center">Book Ticket</legend>
+                <div class="container places">
+                    <div class="city">
+                        <select name="cities" id="cities" onchange="show(value)">
+                            <option value="#">--Select City--</option>
+                            <option value="1"">jodhpur</option>
+                            <option value="2">Jaipur</option>
+                            <option value="3">Udaipur</option>
+                            <option value="4">Jaiselmer</option>
+                            <option value="5">Jaigarh</option>
+                        </select>
+                    </div><span>&#x2192;</span>
+
+                    <div class="tourist_place">
+                        <select name="Tourist_places" id="tourist">
+                            <option value="#">--Select Place--</option>
+                            
+                        </select>
+                    </div>
+
+                    <Button>Book Ticket</Button>
+                </div>
+            </fieldset>
+        </section>
+        <hr>
+        <section>
+            <h2><span> Hotels for you</span></h2>
+            <div class="flexbox">
+
+                <div class="hotel-5">
+                  <h2>5 Star Hotels</h2>
+                    <div class="hotel-pg carousel" data-flickity='{ "wrapAround": true }'>
+                  
+                  <div class="container-2 carousel-cell">
+                    <div class="gallery js-flickity"
+                    data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="orange tree" />
+                        <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201301221205489537-0gck7u443117teelpb9buqct0035.jpg?&output-quality=75&downsize=583:388&output-format=jpg" alt="submerged" />
+                        <img src="https://www.weddingsutra.com/images/jodhpur-umaid-bhavan-img4.jpg" alt="look-out" />
+                      </div>
+                      <h1 id="hotel-name">Umhed Palace</h1>
+                      
+                      <div>
+                            <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                            <span id="mrp">
+                              -&#x20B9;29,000
+                            </span>
+                            <h3>Description: </h3>
+                            <ul>
+                              <li>24 hour room service</li>
+                              <li>Bathrobe, slippers</li>
+                              <li>Daily newspaper on request</li>
+                              <li>Welcome gifts:</li>
+                              <li>Fruit basket</li>
+                              <li>1 bottle of mineral water</li>
+                              <li> Coffee and tea</li>
+                            </ul> 
+                          </div>
+                         <button id="book">Book Now</button>
+                         
+              
+                         
+                        </div>
+                      <div class="container-2 carousel-cell">
+                        <div class="gallery js-flickity"
+                        data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                        <img src="https://static.toiimg.com/photo/51107660.cms" alt="orange tree" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/270x200/17061423.jpg?k=57f117f21a47d8442a218910e89440685d8a6b0c0a9298e41e389b612873dd37&o=" alt="submerged" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH083kHd42fPr2PoUUjA8Y3uiyUuj-knnAtKK1L3DlfnNOgvSD3DUuKNzuHO2QBetzcPo&usqp=CAU" alt="look-out" />
+                      </div>
+                        <h1 id="hotel-name">The Lalit</h1>
+              
+                        <div>
+                          <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                          <span id="mrp">
+                            -&#x20B9;29,000
+                          </span>
+                          <h3>Description: </h3>
+                          <ul>
+                            <li>24 hour room service</li>
+                            <li>Bathrobe, slippers</li>
+                            <li>Daily newspaper on request</li>
+                            <li>Welcome gifts:</li>
+                            <li>Fruit basket</li>
+                            <li>1 bottle of mineral water</li>
+                            <li> Coffee and tea</li>
+                          </ul> 
+                        </div>
+                       <button id="book">Book Now</button>
+                       
+                       
+                       
+                      </div>
+                    <div class="container-2 carousel-cell">
+                      <div class="gallery js-flickity"
+                      data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                      <img src="https://ihplb.b-cdn.net/wp-content/uploads/2013/11/Taj-Palace-Hotel-in-new-delhi.jpg" alt="orange tree" />
+                      <img src="https://proudly.in/wp-content/uploads/2022/07/Novotel-Hyderabad-Convention-Centre.webp" alt="submerged" />
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhrCEbHekmtLZTyGW2vX6Uqe-XLvwfg4SaqodQGGMlq80rcnJxi8EA3-pwDSIfwTwj7Y&usqp=CAU" alt="look-out" />
+                    </div>
+                      <h1 id="hotel-name">Krishna</h1>
+              
+                      <div>
+                        <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                        <span id="mrp">
+                          -&#x20B9;29,000
+                        </span>
+                        <h3>Description: </h3>
+                        <ul>
+                          <li>24 hour room service</li>
+                          <li>Bathrobe, slippers</li>
+                          <li>Daily newspaper on request</li>
+                          <li>Welcome gifts:</li>
+                          <li>Fruit basket</li>
+                          <li>1 bottle of mineral water</li>
+                          <li> Coffee and tea</li>
+                        </ul> 
+                      </div>
+                      <button id="book">Book Now</button>
+                      
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+                  
+                
+              
+                
+                
+                <div class="hotel-5">
+                  <h2>4 Star Hotels</h2>
+                  <div class="hotel-pg carousel" data-flickity='{ "wrapAround": true }'>
+                    
+                    <div class="container-2 carousel-cell">
+                      <div class="gallery js-flickity"
+                       data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                       <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201810111308053927-8dc69b6eca3211e991e20242ac110003.jpg?&output-quality=75&downsize=243:162&output-format=jpg" alt="orange tree" />
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1EsJHtCHPEu0-8K2f1p8DAY7vxq3RH5sadBtgAVq2vQCbYYP2IJ5dCUdlZRpWVBhDBNc&usqp=CAU" alt="submerged" />
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqmh1mkzv0PKqtSlKCy3v25FUxBuXePUeyg3q2a0KKsSeb6aJc-maHCVyyejdyyPE3tLY&usqp=CAU" alt="look-out" />
+                      </div>
+                      <h1 id="hotel-name">The Fern</h1>
+                      
+                      <div>
+                        <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                        <span id="mrp">
+                          -&#x20B9;29,000
+                        </span>
+                        <h3>Description: </h3>
+                        <ul>
+                          <li>24 hour room service</li>
+                          <li>Bathrobe, slippers</li>
+                          <li>Daily newspaper on request</li>
+                          <li>Welcome gifts:</li>
+                          <li>Fruit basket</li>
+                          <li>1 bottle of mineral water</li>
+                          <li> Coffee and tea</li>
+                        </ul> 
+                      </div>
+                      <button id="book">Book Now</button>
+                      
+                      
+                      
+                           </div>
+                         <div class="container-2 carousel-cell">
+                           <div class="gallery js-flickity"
+                           data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                           <img src="https://tophotel.news/wp-content/uploads/2017/03/ways-final-1-1080x675.jpg" alt="orange tree" />
+                           <img src="https://archello.s3.eu-central-1.amazonaws.com/images/2011/12/06/Sunny-Beach-4-star-hotel-a-project-architects-2001.1506065993.5459.jpg" alt="submerged" />
+                           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2KoivM9TaNlSonyTwM1Bh1w14Q5_wvcdjw&usqp=CAU" alt="look-out" />
+                          </div>
+                          <h1 id="hotel-name">Himalayan</h1>
+                 
+                          <div>
+                            <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                            <span id="mrp">
+                              -&#x20B9;29,000
+                            </span>
+                            <h3>Description: </h3>
+                            <ul>
+                              <li>24 hour room service</li>
+                              <li>Bathrobe, slippers</li>
+                              <li>Daily newspaper on request</li>
+                              <li>Welcome gifts:</li>
+                              <li>Fruit basket</li>
+                              <li>1 bottle of mineral water</li>
+                              <li> Coffee and tea</li>
+                            </ul> 
+                          </div>
+                          <button id="book">Book Now</button>
+                          
+                          
+                          
+                        </div>
+                        <div class="container-2 carousel-cell">
+                          <div class="gallery js-flickity"
+                          data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                          <img src="https://r1imghtlak.mmtcdn.com/7aa1588c56dd11ecbe470a58a9feac02.jpg?&output-quality=75&downsize=583:388&output-format=jpg" alt="orange tree" />
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPX-0yS8R66Z24PRm8EfUu8A34UqqJyEmbK0V_OFwVxoPLPHSt_Dszxn0s5fXfzAywqq8&usqp=CAU" alt="submerged" />
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjnucnknOJ1SXzN91L5NjlnW4jo1n-JWiUifIypxXXZPwOzNJpqv_GnSRjeBCKA9HwNo&usqp=CAU" alt="look-out" />
+                        </div>
+                         <h1 id="hotel-name">Inox</h1>
+                 
+                         <div>
+                           <span id="rating">&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                           <span id="mrp">
+                             -&#x20B9;29,000
+                           </span>
+                           <h3>Description: </h3>
+                           <ul>
+                             <li>24 hour room service</li>
+                             <li>Bathrobe, slippers</li>
+                             <li>Daily newspaper on request</li>
+                             <li>Welcome gifts:</li>
+                             <li>Fruit basket</li>
+                             <li>1 bottle of mineral water</li>
+                             <li> Coffee and tea</li>
+                            </ul> 
+                          </div>
+                         <button id="book">Book Now</button>
+                         
+                         
+                         
+                        </div>
+                     </div>
+                   </div>
+                  
+                   
+                   
+                   
+                   <div class="hotel-5">
+                     <h2>3 Star Hotels</h2>
+                     <div class="hotel-pg carousel" data-flickity='{ "wrapAround": true }'>
+                       
+                       <div class="container-2 carousel-cell">
+                         <div class="gallery js-flickity"
+                         data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                         <img src="https://threebestrated.in/images/ibisNewDelhiAerocity-Delhi-DL.jpeg" alt="orange tree" />
+                         <img src="https://www.hotelthreestar.com/wp-content/uploads/2020/10/Deluxe-Room-3-1434x1080.jpg" alt="submerged" />
+                         <img src="https://suxustechnology.in/images/DSC4.jpg" alt="look-out" />
+                        </div>
+                           <h1 id="hotel-name">Ibis Hotel</h1>
+                           
+                           <div>
+                             <span id="rating">&#x2605;&#x2605;&#x2605;</span>
+                             <span id="mrp">
+                               -&#x20B9;29,000
+                                 </span>
+                                 <h3>Description: </h3>
+                                 <ul>
+                                   <li>24 hour room service</li>
+                                   <li>Bathrobe, slippers</li>
+                                   <li>Daily newspaper on request</li>
+                                   <li>Welcome gifts:</li>
+                                   <li>Fruit basket</li>
+                                   <li>1 bottle of mineral water</li>
+                                   <li> Coffee and tea</li>
+                                 </ul> 
+                                </div>
+                              <button id="book">Book Now</button>
+                              
+                              
+                              
+                            </div>
+                            <div class="container-2 carousel-cell">
+                             <div class="gallery js-flickity"
+                             data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                             <img src="https://www.hoteldekho.com/storage/img/hotels/1632751050IMG2.jpg" alt="orange tree" />
+                             <img src="https://www.holidify.com/images/cmsuploads/compressed/211008157_20220223170121.jpg" alt="submerged" />
+                             <img src="https://pediaa.com/wp-content/uploads/2017/01/Difference-Between-3-Star-and-4-Star-Hotel-1.jpg" alt="look-out" />
+                           </div>
+                             <h1 id="hotel-name">Miraj</h1>
+                             
+                             <div>
+                               <span id="rating">&#x2605;&#x2605;&#x2605;</span>
+                               <span id="mrp">
+                                 -&#x20B9;29,000
+                                </span>
+                                <h3>Description: </h3>
+                                <ul>
+                                 <li>24 hour room service</li>
+                                 <li>Bathrobe, slippers</li>
+                                 <li>Daily newspaper on request</li>
+                                 <li>Welcome gifts:</li>
+                                 <li>Fruit basket</li>
+                                 <li>1 bottle of mineral water</li>
+                                 <li> Coffee and tea</li>
+                               </ul> 
+                              </div>
+                            <button id="book">Book Now</button>
+                            
+                            
+                            
+                           </div>
+                         <div class="container-2 carousel-cell">
+                           <div class="gallery js-flickity"
+                           data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+                           <img src="https://www.chandigarhhelp.com/wp-content/uploads/2022/02/3-Star-Hotels-in-Chandigarh.jpg" alt="orange tree" />
+                           <img src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2016/03/w-paris-opera-france-supertiny-rooms.jpg?ssl=1" alt="submerged" />
+                           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpW-iO9LY7OnX_HvFqe_pfyVi9GtKATmf8NGm5FAuN0y8B25d5f0E10nPOLDwbMR5jQW4&usqp=CAU" alt="look-out" />
+                          </div>
+                           <h1 id="hotel-name">The Collar</h1>
+                   
+                           <div>
+                             <span id="rating">&#x2605;&#x2605;&#x2605;</span>
+                             <span id="mrp">
+                               -&#x20B9;29,000
+                              </span>
+                              <h3>Description: </h3>
+                              <ul>
+                                <li>24 hour room service</li>
+                                <li>Bathrobe, slippers</li>
+                                <li>Daily newspaper on request</li>
+                                <li>Welcome gifts:</li>
+                                <li>Fruit basket</li>
+                                <li>1 bottle of mineral water</li>
+                                <li> Coffee and tea</li>
+                              </ul> 
+                           </div>
+                           <button id="book">Book Now</button>
+                           
+                           
+                           
+                          </div>
+                       </div>
+                     </div>
+                       
+            
+            </div>
+                    </section>
+                  
+                  
+
+        </section>
+        <hr>
+        <section>
+            <div class="Videos_last">
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="navbar">
+            <a href="#">About us</a>  
+            <a href="#">Contact us</a>
+            <a href="#">Chat box</a>
+            <a href="#">&copy;copyright 1986 </a>
+
+        </div>
+    </footer>
+
+    
+
+    <script>
+
+        //if jodhpur selected then only jodhpur places will be seen in book ticket//
+       let citys=document.getElementById('cities');
+       var place=document.getElementById('tourist');
+       function remove_options()
+       {
+        while(place.options.length>0)
+                      {
+                        place.remove(0);
+                      }
+       }
+    
+       function show(num)
+    {
+        switch(num)
+        {
+            case '1':  remove_options();
+                       place.add(new Option("Kaylana",0));
+                       place.add(new Option("Umhed palace",0));
+                       place.add(new Option("Mehrangarh",0));
+                       place.add(new Option("Mandoor",0));
+                     break;
+            case '2':  remove_options();
+                       place.add(new Option("Jantar Mantar",0));
+                       place.add(new Option("Hawa Mahal",0));
+                       place.add(new Option("Boating",0));
+                       place.add(new Option("Fort",0));
+                     break;
+            case '3':      remove_options();
+                       place.add(new Option("Lake",0));
+                       place.add(new Option("City Palace",0));
+                       place.add(new Option("Dabook",0));
+                       place.add(new Option("Saheli ki Baadi",0));
+                     break;  
+            case '4':      remove_options();
+                       place.add(new Option("Tanaut Mata JI",0));
+                       place.add(new Option("Desert",0));
+                       place.add(new Option("SUM",0));
+                     break;           
+            case '5':      remove_options();
+                       place.add(new Option("Haunted fort",0));
+                     break;          
+            default:   remove_options();
+                      place.add(new Option("--Select Place--",0));
+                     break;           
+        }
+    }
+
+// Navbar me jo hotels h uspe mouse ko leke jaye tabka code (niche vala)//
+
+    let hotel=document.getElementById("hotel");
+    hotel.addEventListener("mouseover",showoptions);
+    let options=document.getElementById("nav-options");
+    function showoptions()
+    {
+      options.style.display="flex"; 
+
+    }
+    hotel.addEventListener("mouseout",showoptions1);
+    function showoptions1()
+    {
+      options.style.display="none"; 
+
+    }
+    
+    
+    </script>
+</body>
+
+</html>
