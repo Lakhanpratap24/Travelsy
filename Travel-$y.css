@@ -1,0 +1,99 @@
+
+
+/* BASE OR FUNDAMENTAL CODE FOR ALL THE TAGS */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* CODE FOR THE TOP MOST NAMING OF "Travel-$y" */
+header h1 {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120px;
+    font-weight: bolder;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 63%, rgba(160, 240, 130, 1) 90%, rgba(7, 57, 68, 1) 100%);
+
+}
+
+
+header h1 span {
+    font-size: 1em;
+    color: gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* NAVIGATION BAR STYLING  */
+
+.navbar{
+    width:100%;
+    margin: 10px 0px;
+    display: flex;
+    background-color: black; 
+    /* THIS BELOW CODE USED TO MAKE THE NAVIGATION BAR STICK AT TOP FOR ALL THE SCROLL TIME */
+    position:sticky;
+    top: 0;
+}
+
+/* THIS CODE IS FOR THE ELEMENTS IN THE NAVIGATION BAR */
+.navbar a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+/* WHEN THE MOUSE CURSOR GOES ON ANY ELEMENT OF THE NAVBAR THAT TIME CODE IS WRITTEN BELOW */
+.navbar a:hover{
+    background-color: white;
+    color: black;
+ }
+
+/* BELOW CODE IS FOR HIDING AND ARRANGING THE 'HOTEL' BUTTONS SUBMENU */
+#nav-options{
+    background-color:black;
+    position: absolute;
+    top: 35px;
+    display: none;
+    flex-direction: column;
+}
+
+
+
+/* BELOW CODE IS FOR THE RIGHT SHIFTING OF LOGIN BUTTON  */
+ .navbar #login{position:absolute;
+    right: 30px;
+}
+
+
+
+@media  screen and (max-width:1400px) {
+    header h1{
+        font-size: 200px;
+    }
+    .navbar{
+        padding: 10px 0px;
+        flex-direction: column;
+        position:relative;
+    }
+    .navbar a{
+        text-align: center;
+    }
+    .navbar #login{
+        position:static;
+    }
+}
