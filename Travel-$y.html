@@ -7,6 +7,10 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="Travel-$y.css">
+
+    <!-- LINKING BELOW LINK FOR HAMBURGER ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     
@@ -15,11 +19,20 @@
 <header>
     <h1>Travel-<span>&dollar;</span>y</h1>
 </header>
-<nav class="navbar">
+
+<!-- HAMBURGER ICON code-->
+<a href="javascript:void(0);" class="ham-icon" onclick="ham_clicked()">
+    <i class="fa fa-bars"></i>
+</a>
+
+
+
+<nav class="navbar" id="navbarid"  >
     <a href="#">Home</a>
     <a href="#" target="_parent">Places</a>
    <div id="hotel">
-    <a href="#" id="hotel-click">Hotels <span style="font-size:15px;">&#9660;</span></a>
+<!-- WHEN THE BELOW ONE IS CLICKED THE TYPES OF HOTELS ARE SHOWN -->
+    <a href="#" id="hotel-click" onclick="hotel_options()">Hotels <span style="font-size:15px;">&#9660;</span></a>
         <div id="nav-options">
             <a href="#">5 Star</a>
             <a href="#">4 Star</a>
@@ -27,10 +40,39 @@
         </div>
     </div>
     <a href="#">Adventure</a>
+
+    <!-- LOGIN OPTION WHICH ON CLICK SHOWS LOGIN PAGE -->
     <a href="#" id="login" onclick="showkr()">Login</a>
 </nav>
 
 
+hello
 
+
+<script>
+    // WHEN HAMBURGER ICON IS CLICKED BELOW CODE WILL BE EXECUTED
+    function ham_clicked()
+    {
+        var x = document.getElementById("navbarid");
+        if (x.style.display === "flex") {
+             x.style.display = "none";
+        } else {
+             x.style.display = "flex";
+        }
+    }
+
+// WHEN HOTELS IN NAVBAR IS CLCIKED
+    function hotel_options(){
+        var x=document.getElementById("nav-options");
+        if (x.style.display === "flex") {
+             x.style.display = "none";
+        } else {
+             x.style.display = "flex";
+        }
+    }
+
+
+    
+</script>
 </body>
 </html>
